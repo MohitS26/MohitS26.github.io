@@ -88,6 +88,17 @@ body {
   outline: 0 !important;
 }
 
+
+.glow {
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+}
+
+.large-text {
+  font-size: 15.5px;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
