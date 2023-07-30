@@ -4674,8 +4674,7 @@ input[type="button"].btn-block {
 
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
-  transition: .5s ease-in-out;
-  text-shadow: 0 0 20px #F85C70, 0 0 20px #F85C70;
+  text-shadow: 0 0 5px #F85C70, 0 0 5px #F85C70;
 }
 
 .nav-link.disabled {

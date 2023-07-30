@@ -13,23 +13,60 @@
 */
 
 // smooth scroll
+// $(document).ready(function(){
+//     $(".navbar .nav-link").on('click', function(event) {
+
+//         if (this.hash !== "") {
+
+//             event.preventDefault();
+
+//             var hash = this.hash;
+
+//             $('html, body').animate({
+//                 scrollTop: $(hash).offset().top
+//             }, 700, function(){
+//                 window.location.hash = hash;
+//             });
+//         } 
+//     });
+// });
+
+// $(document).ready(function(){
+//   $(".navbar .nav-link").on('click', function(event) {
+
+//       if (this.hash !== "") {
+
+//           event.preventDefault();
+
+//           var hash = this.hash;
+//           var offset = 500; // adjust this value to change the scroll position
+
+//           $('html, body').animate({
+//               scrollTop: $(hash).offset().top - offset
+//           }, 700, function(){
+//               window.location.hash = hash;
+//           });
+//       } 
+//   });
+// });
+
 $(document).ready(function(){
-    $(".navbar .nav-link").on('click', function(event) {
+  $(".navbar .nav-link").on('click', function(event) {
 
-        if (this.hash !== "") {
+      if (this.hash !== "") {
 
-            event.preventDefault();
+          event.preventDefault();
 
-            var hash = this.hash;
+          var hash = this.hash;
+          var offset = 30; // adjust this value to change the scroll position
 
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 700, function(){
-                window.location.hash = hash;
-            });
-        } 
-    });
+          $('html, body').animate({
+              scrollTop: $(hash).offset().top - offset
+          }, 700);
+      } 
+  });
 });
+
 
 // // protfolio filters
 // $(window).on("load", function() {
