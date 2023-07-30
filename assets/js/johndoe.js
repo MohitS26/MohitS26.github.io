@@ -31,40 +31,40 @@ $(document).ready(function(){
     });
 });
 
-// protfolio filters
-$(window).on("load", function() {
-    var t = $(".portfolio-container");
-    t.isotope({
-        filter: ".new",
-        animationOptions: {
-            duration: 750,
-            easing: "linear",
-            queue: !1
-        }
-    }), $(".filters a").click(function() {
-        $(".filters .active").removeClass("active"), $(this).addClass("active");
-        var i = $(this).attr("data-filter");
-        return t.isotope({
-            filter: i,
-            animationOptions: {
-                duration: 750,
-                easing: "linear",
-                queue: !1
-            }
-        }), !1
-    });
-});
+// // protfolio filters
+// $(window).on("load", function() {
+//     var t = $(".portfolio-container");
+//     t.isotope({
+//         filter: ".new",
+//         animationOptions: {
+//             duration: 750,
+//             easing: "linear",
+//             queue: !1
+//         }
+//     }), $(".filters a").click(function() {
+//         $(".filters .active").removeClass("active"), $(this).addClass("active");
+//         var i = $(this).attr("data-filter");
+//         return t.isotope({
+//             filter: i,
+//             animationOptions: {
+//                 duration: 750,
+//                 easing: "linear",
+//                 queue: !1
+//             }
+//         }), !1
+//     });
+// });
 
-const letters = "abcdefghijklMnopqrStuvwxyz";
+const letters = "1234567890abcdefghijklMnopqrStuvwxyz";
 let intervals = [];
 
-function applyGlitchEffect(element) {
+function applyGlitchEffect(element, index) {
   let iteration = 0;
   const targetText = element.innerText;
 
-  clearInterval(intervals[element]);
+  clearInterval(intervals[index]);
 
-  intervals[element] = setInterval(() => {
+  intervals[index] = setInterval(() => {
     const currentText = element.innerText;
 
     element.innerText = currentText
@@ -79,22 +79,23 @@ function applyGlitchEffect(element) {
       .join("");
 
     if (iteration >= targetText.length) { 
-      clearInterval(intervals[element]);
+      clearInterval(intervals[index]);
     }
 
     iteration += 1 / 3;
 
     if (iteration >= targetText.length + 1) {
-      clearInterval(intervals[element]);
+      clearInterval(intervals[index]);
     }
   }, 30);
 }
 
 // Call the function on site load (refresh)
 window.addEventListener("load", () => {
-  const glitchElements = document.querySelectorAll("h1,h2,h3,h4,h5,h6,p,span,a");
-  glitchElements.forEach(element => applyGlitchEffect(element));
+  const glitchElements = document.querySelectorAll("h1,h2,h3,h4,h6,span");
+  glitchElements.forEach((element, index) => applyGlitchEffect(element, index));
 });
+
 
 // google maps
 function initMap() {
