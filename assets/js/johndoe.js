@@ -55,7 +55,7 @@ $(window).on("load", function() {
     });
 });
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = "abcdefghijklMnopqrStuvwxyz";
 let interval = null;
 document.querySelector("h1.header-title").onmouseover = event => {  
   let iteration = 0;
