@@ -338,14 +338,14 @@ a:hover {
 }
 
 #glow {
-  transition: .5s ease-in-out;
-  text-shadow: 0 0 10px #F85C70, 0 0 10px #F85C70;
+  transition: .3s ease-in-out;
+  text-shadow: 0 0 5px #F85C70, 0 0 5px #F85C70;
   color: #F85C70;
   overflow: visible;
   
   &:hover {
     color: #fff;
-    text-shadow: 0 0 100px gold, 0 0 100px gold;
+    text-shadow: 0 0 10px gold, 0 0 10px gold;
     overflow: visible
   }
 }
