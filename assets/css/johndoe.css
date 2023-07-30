@@ -12,6 +12,38 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+
+@mixin transition($transition){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin textShadow($text-shadow) {
+  -webkit-text-shadow: $text-shadow;
+  -moz-text-shadow: $text-shadow;
+  -ms-text-shadow: $text-shadow;
+  -o-text-shadow: $text-shadow;
+  text-shadow: $text-shadow;
+}
+
+@mixin boxShadow($box-shadow) {
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  -ms-box-shadow: $box-shadow;
+  -o-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+
+@mixin NoUserSelect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap");
 :root {
   --blue: #79A9F5;
@@ -89,15 +121,20 @@ body {
 }
 
 
-.glow {
+/* .glow {
     font-size: 24px;
     color: white;
     text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
-}
+} */
 
 .large-text {
-  font-size: 15.5px;
+  font-size: 16px;
 }
+
+.large-text2, .large-text2 span {
+  font-size: 17px !important;
+}
+
 
 hr {
   box-sizing: content-box;
@@ -291,12 +328,31 @@ a {
   color: #F85C70;
   text-decoration: none;
   background-color: transparent;
+  
 }
 
 a:hover {
   color: #f51330;
   text-decoration: none;
+  
 }
+
+#glow {
+  transition: .5s ease-in-out;
+  text-shadow: 0 0 10px #F85C70, 0 0 10px #F85C70;
+  color: #F85C70;
+  overflow: visible;
+  
+  &:hover {
+    color: #fff;
+    text-shadow: 0 0 100px gold, 0 0 100px gold;
+    overflow: visible
+  }
+}
+
+
+
+
 
 a:not([href]):not([tabindex]) {
   color: inherit;
@@ -4599,6 +4655,8 @@ input[type="button"].btn-block {
 
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
+  transition: .5s ease-in-out;
+  text-shadow: 0 0 20px #F85C70, 0 0 20px #F85C70;
 }
 
 .nav-link.disabled {
@@ -4636,6 +4694,7 @@ input[type="button"].btn-block {
   color: #495057;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
+  transition: .5s ease-in-out;
 }
 
 .nav-tabs .dropdown-menu {

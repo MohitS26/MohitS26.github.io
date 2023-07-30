@@ -55,7 +55,7 @@ $(document).ready(function(){
 //     });
 // });
 
-const letters = "1234567890abcdefghijklMnopqrStuvwxyz";
+const letters = "$#*@?!1234567890abcdefghijklMnopqrStuvwxyz";
 let intervals = [];
 
 function applyGlitchEffect(element, index) {
