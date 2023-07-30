@@ -79,7 +79,7 @@ document.querySelector("h1.header-title").onmouseover = event => {
     }
     
     iteration += 1 / 3;
-  }, 30);
+  }, 100);
 }
 
 // google maps
