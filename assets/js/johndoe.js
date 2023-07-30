@@ -57,7 +57,7 @@ $(window).on("load", function() {
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
-document.querySelector("h1.glitch").onmouseover = event => {  
+document.querySelector("h1.header-title").onmouseover = event => {  
   let iteration = 0;
   
   clearInterval(interval);
