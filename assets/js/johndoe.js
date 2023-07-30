@@ -56,31 +56,45 @@ $(window).on("load", function() {
 });
 
 const letters = "abcdefghijklMnopqrStuvwxyz";
-let interval = null;
-document.querySelector("h1.header-title").onmouseover = event => {  
+let intervals = [];
+
+function applyGlitchEffect(element) {
   let iteration = 0;
-  
-  clearInterval(interval);
-  
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
+  const targetText = element.innerText;
+
+  clearInterval(intervals[element]);
+
+  intervals[element] = setInterval(() => {
+    const currentText = element.innerText;
+
+    element.innerText = currentText
       .split("")
       .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
+        if (index < iteration) {
+          return targetText[index];
         }
-      
-        return letters[Math.floor(Math.random() * 26)]
+
+        return letters[Math.floor(Math.random() * 26)];
       })
       .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval);
+
+    if (iteration >= targetText.length) { 
+      clearInterval(intervals[element]);
     }
-    
+
     iteration += 1 / 3;
-  }, 100);
+
+    if (iteration >= targetText.length + 1) {
+      clearInterval(intervals[element]);
+    }
+  }, 30);
 }
+
+// Call the function on site load (refresh)
+window.addEventListener("load", () => {
+  const glitchElements = document.querySelectorAll("h1,h2,h3,h4,h5,h6,p,span,a");
+  glitchElements.forEach(element => applyGlitchEffect(element));
+});
 
 // google maps
 function initMap() {
