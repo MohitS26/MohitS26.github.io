@@ -55,6 +55,7 @@ $(document).ready(function(){
 //     });
 // });
 
+// For the glitch like event on the text
 const letters = "$#*@?!1234567890abcdefghijklMnopqrStuvwxyz";
 let intervals = [];
 
@@ -90,9 +91,10 @@ function applyGlitchEffect(element, index) {
   }, 30);
 }
 
+
 // Call the function on site load (refresh)
 window.addEventListener("load", () => {
-  const glitchElements = document.querySelectorAll("h1,h2,h3,h4,h6,span");
+  const glitchElements = document.querySelectorAll("h1");
   glitchElements.forEach((element, index) => applyGlitchEffect(element, index));
 });
 
