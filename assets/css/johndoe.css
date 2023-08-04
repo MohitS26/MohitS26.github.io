@@ -274,6 +274,67 @@ p {
   margin-bottom: rem;
 }
 
+/* -------------------------------------------------------------------------------------------------- */
+.element--description,
+.element--hover {
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #fff;
+  
+  background-color: transparent;
+  
+  padding: 2rem 4rem;
+  border-radius: 8rem; 
+}
+
+.element--description {
+  margin-right: 4rem;
+  
+  /*  Here's where the shadow 🎉 happens */
+  /* // Esentially this is built using a series of slightly */
+  /* // different shadows. You can change these around to move */
+  /* // the "lighting" on the page. As a rule of thumb, the furter */
+  /* // a shadow is from the object, the more blur it should have. */
+  box-shadow: 0 4px  4px  var(--danger),
+              0 1px  6px  var(--danger),
+              0 8px  8px  var(--danger), 
+              0 16px 16px var(--danger), 
+              8px 32px 32px var(--danger), 
+              8px 64px 64px var(--danger);
+}
+
+.element--hover {
+  cursor: pointer;
+  
+  transition: box-shadow 600ms cubic-bezier(.33,.11,.02,.99),
+              transform  600ms cubic-bezier(.33,.11,.02,.99);
+  
+  /* The dynamic hover effect */
+  &:hover {
+    box-shadow: 0 4px  4px  var(--danger),
+                0 1px  6px  var(--danger),
+                0 8px  8px  var(--danger), 
+                0 16px 16px var(--danger), 
+                8px 32px 32px var(--danger), 
+                8px 64px 64px var(--danger);
+
+    transform: scale(1.05)
+               translateY(-0.5rem);
+  }
+  
+  
+  &:active {
+    box-shadow: 0 4px  4px  var(--danger),
+                0 1px  6px  var(--danger),
+                0 8px  8px  var(--danger), 
+                0 16px 16px var(--danger), 
+                8px 32px 32px var(--danger), 
+                8px 64px 64px var(--danger);
+
+  }
+}
+/* ----------------------------------------------------------------------------------------------------------- */
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -11483,12 +11544,31 @@ p {
   display: -ms-flexbox;
   display: flex;
   text-align: left;
-  border: 1px solid #dee2e6;
+  /* border: 1px solid #dee2e6; */
   margin-bottom: 30px;
   overflow: hidden;
   margin: 0 15px 30px;
   border-radius: 10px;
+  transition: box-shadow 600ms cubic-bezier(.33,.11,.02,.99),
+              transform  600ms cubic-bezier(.33,.11,.02,.99)
+              
 }
+.blog-card:hover {
+  outline: none;
+  
+  border-color: white;
+  box-shadow: 0 0 10px white;
+  transform: scale(1.05)
+             translateY(-0.5rem);
+                         
+}
+
+/* .blog-card:hover ~ *:not(.blog-card) {
+  filter: blur(5px);
+  transition: filter 600ms cubic-bezier(.33,.11,.02,.99);
+} */
+
+
 
 .blog-card .img-holder {
   min-width: 350px;
