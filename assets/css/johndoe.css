@@ -429,6 +429,18 @@ a:hover {
     overflow: visible
   }
 }
+#glow2 {
+  transition: .3s ease-in-out;
+  /* text-shadow: 0 0 5px #F85C70, 0 0 5px #F85C70; */
+  color: #F85C70;
+  overflow: visible;
+  
+  &:hover {
+    color: #fff;
+    text-shadow: 0 0 10px gold, 0 0 10px gold;
+    overflow: visible
+  }
+}
 
 
 
@@ -11573,6 +11585,7 @@ p {
   overflow: hidden;
   margin: 0 15px 30px;
   border-radius: 10px;
+  width: 100%;
   
   /* set transition duration and timing function for all relevant properties */
   transition: 
@@ -11586,7 +11599,7 @@ p {
     outline: none;
 
     /* use the same color value for all relevant properties */
-    color: var(--primary);
+    /* color: var(--primary); */
     border-color: var(--primary);
     /* box-shadow: 0 0 10px var(--primary); */
     transform: scale(1.05)
