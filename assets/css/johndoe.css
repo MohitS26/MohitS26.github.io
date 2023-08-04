@@ -11537,14 +11537,14 @@ p {
   visibility: visible;
 }
 
-/* blog wrapper */
+/* blog wrapper
 .blog-card {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   text-align: left;
-  /* border: 1px solid #dee2e6; */
+  
   margin-bottom: 30px;
   overflow: hidden;
   margin: 0 15px 30px;
@@ -11557,16 +11557,88 @@ p {
   outline: none;
   
   border-color: white;
-  box-shadow: 0 0 10px white;
+  box-shadow: 0 0 10px var(--primary);
   transform: scale(1.05)
              translateY(-0.5rem);
                          
+} */
+
+.blog-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  margin-bottom: 30px;
+  overflow: hidden;
+  margin: 0 15px 30px;
+  border-radius: 10px;
+  
+  /* set transition duration and timing function for all relevant properties */
+  transition: 
+              transform 600ms cubic-bezier(.33,.11,.02,.99),
+              color 600ms cubic-bezier(.33,.11,.02,.99);
+              /* border-color 600ms cubic-bezier(.33,.11,.02,.99); */
+              /* box-shadow 600ms cubic-bezier(.33,.11,.02,.99); */
+            }
+
+.blog-card:hover {
+    outline: none;
+
+    /* use the same color value for all relevant properties */
+    color: var(--primary);
+    border-color: var(--primary);
+    /* box-shadow: 0 0 10px var(--primary); */
+    transform: scale(1.05)
+        translateY(-0.5rem);
 }
 
-/* .blog-card:hover ~ *:not(.blog-card) {
-  filter: blur(5px);
-  transition: filter 600ms cubic-bezier(.33,.11,.02,.99);
-} */
+
+.blog-card::before, .blog-card::after {
+    /* styles from .draw-border::before and .draw-border::after */
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.blog-card::before {
+    /* styles from .draw-border::before */
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+}
+
+.blog-card::after {
+    /* styles from .draw-border::after */
+    border-top-width: 4px;
+    border-right-width: 4px;
+}
+
+
+
+.blog-card:hover::before, .blog-card:hover::after {
+    /* styles from .draw-border:hover::before and .draw-border:hover::after */
+    border-color: var(--danger);
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height:100%;
+}
+
+.blog-card:hover::before {
+    /* styles from .draw-border:hover::before */
+    transition-delay: 0s,0s,0.3s; 
+}
+
+.blog-card:hover::after {
+    /* styles from .draw-border:hover::after */
+    transition-delay:0s,0.3s,0s; 
+}
+
 
 
 
