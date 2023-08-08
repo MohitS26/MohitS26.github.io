@@ -11092,7 +11092,7 @@ a.text-info:hover, a.text-info:focus {
 }
 
 .text-warning {
-  color: #FF8882 !important;
+  color:#F85C70 !important
 }
 
 a.text-warning:hover, a.text-warning:focus {
@@ -12157,6 +12157,10 @@ pre .code {
   }
   .circle-arrow img{
     transform: scale(0.70);
+  }
+  .explore-section{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
 @media (max-width:400px) {
