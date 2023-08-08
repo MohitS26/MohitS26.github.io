@@ -12122,55 +12122,9 @@ pre .code {
   width: 150px;
   background-color: rgba(255, 60, 110, 1);
 }
-@media (max-width:992px) {
-  .explore-section{
-    flex-direction: column !important;
-  }
-  .circle-arrow{
-    width: 80%;
-    height: 120px;
-    clip-path: none;
-    border-radius: 80px;
-  }
-  .circle-arrow img{
-    object-fit: none;
-  }
-  .bg-dark{
-    padding-top: 25px !important;
-    padding-bottom: 35px !important;
-  }
-}
-@media (max-width:600px) {
-  .big-text-container
-  {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  .big-text{
-    font-size: 80px;
-  }
-  .circle-arrow{
+.vid{
     width: 100%;
-    height: 90px;
-    clip-path: none;
-    border-radius: 80px;
-  }
-  .circle-arrow img{
-    transform: scale(0.70);
-  }
-  .explore-section{
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-}
-@media (max-width:400px) {
-  .big-text{
-    font-size: 70px;
-  }
-  .circle-arrow{
-    width: 100%;
-    height: 80px;
-    clip-path: none;
-    border-radius: 80px;
-  }
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
 }
