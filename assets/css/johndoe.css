@@ -7493,7 +7493,9 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+ border:1px solid white;
+ border-left: 0px;
+ border-right: 0px;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -11090,7 +11092,7 @@ a.text-info:hover, a.text-info:focus {
 }
 
 .text-warning {
-  color: #FF8882 !important;
+  color:#F85C70 !important
 }
 
 a.text-warning:hover, a.text-warning:focus {
@@ -11583,7 +11585,6 @@ p {
   text-align: left;
   margin-bottom: 30px;
   overflow: hidden;
-  margin: 0 15px 30px;
   border-radius: 10px;
   width: 100%;
   
@@ -12102,4 +12103,28 @@ pre .code {
   background: #F85C70;
   display: block;
   margin-top: 10px;
+}
+
+
+.big-text{
+  color: white;
+  font-size: 120px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.big-text-container{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.circle-arrow{
+  clip-path: circle(50% at 50% 50%);
+  height: 150px;
+  width: 150px;
+  background-color: rgba(255, 60, 110, 1);
+}
+.vid{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
 }
