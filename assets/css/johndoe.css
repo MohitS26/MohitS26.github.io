@@ -75,8 +75,8 @@
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: "Source Sans Pro", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --background-color: white;
-  --text-color: black;
+  --background-color: black;
+  --text-color: white;
 }
 
 
