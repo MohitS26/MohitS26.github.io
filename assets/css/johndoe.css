@@ -77,16 +77,27 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --background-color: black;
   --text-color: white;
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --background-color-dark: #000000;
+  --text-color-dark: #ffffff;
 }
 
 
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: black;
     --text-color: white;
   }
-}
+} */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+  }
+}
 *,
 *::before,
 *::after {
